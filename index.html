@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Sheet calculator</title>
+    <!-- Extermal file for styling  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <Header>
+            <!-- Introduction About program -->
+            Time sheet calculator
+        </Header>
+        <!-- Task perform into the input -->
+        <!-- 
+        <div class="heading">
+            <span class="topic">Day</span>
+            <span class="topic">Starting  Time</span>
+            <span class="topic">Ending Time
+            </span>
+            <span class="topic">Break Defuction</span>
+            <span class="topic">Total</span>
+        </div>
+
+        <div class="heading">
+            <span class="topic">Monday</span>
+        </div> -->
+        <table>
+            <thead class="heading">
+                <tr>
+                    <th>Day</th>
+                    <th>Starting Time</th>
+                    <th>Ending Time</th>
+                    <th>Break Defuction</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody class="repeat">
+                <tr>
+                        <td>
+                            <label for="day"></label>
+                            <select class="day">
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thuesday">Thuesday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Satureday">Satureday</option>
+                            </select>
+    
+                            <!-- Starting time -->
+                        <td>
+                            <form action="getvalue()">
+                            <input type="num" placeholder="00" class="starthour" style="width:
+                        20px">:
+                            <input type="num" placeholder="00" class="startmint" style="width:20px;">
+                            <label for="Am or Pm" class="amorpmst"></label>
+                            <select class="AmorPm">
+                                <option value="Am">Am</option>
+                                <option value="Pm">Pm</option>
+                            </select>
+                        </form>
+                        </td>
+    
+                        <!-- Ending time -->
+                        <td>
+                            <input type="num" placeholder="00" class="endhour" style="width:
+                        20px">:
+                            <input type="num" placeholder="00" class="endmint" style="width:20px;">
+                            <label for="Am or Pm"class="amorpmen"></label>
+                            <select class="AmorPm">
+                                <option value="Am">Am</option>
+                                <option value="Pm">Pm</option>
+                            </select>
+                        </td>
+    
+                         <!-- Break Defuction -->
+                        <td>
+                            <input type="num" placeholder="00" class="breakhour" style="width:
+                        20px">:
+                            <input type="num" placeholder="00" class="breakmint" style="width:20px;">
+                        </td>
+                    
+                        <!-- Total hours -->
+                        <td>
+                            <div class="resultdiv" id="result0">00:00</div>
+                        </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="day"></label>
+                        <select id="day">
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thuesday">Thuesday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Satureday">Satureday</option>
+                        </select>
+
+                        <!-- Starting time -->
+                    <td>
+                        <form action="getvalue()">
+                        <input type="num" placeholder="00" class="starthour" style="width:
+                    20px">:
+                        <input type="num" placeholder="00" class="startmint" style="width:20px;">
+                        <label for="Am or Pm"class="amorpmst"></label>
+                        <select class="AmorPm">
+                            <option value="Am">Am</option>
+                            <option value="Pm">Pm</option>
+                        </select>
+                    </form>
+                    </td>
+
+                    <!-- Ending time -->
+                    <td>
+                        <input type="num" placeholder="00" class="endhour" style="width:
+                    20px">:
+                        <input type="num" placeholder="00" class="endmint" style="width:20px;">
+                        <label for="Am or Pm"class="amorpmen"></label>
+                        <select class="AmorPm">
+                            <option value="Am">Am</option>
+                            <option value="Pm">Pm</option>
+                        </select>
+                    </td>
+
+                     <!-- Break Defuction -->
+                    <td>
+                        <input type="num" placeholder="00" class="breakhour" style="width:
+                    20px">:
+                        <input type="num" placeholder="00" class="breakmint" style="width:20px;">
+                    </td>
+                
+                    <!-- Total hours -->
+                    <td>
+                        <div class="resultdiv" id="result1">00:00</div>
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="day"></label>
+                    <select id="day">
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Thuesday">Thuesday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Satureday">Satureday</option>
+                    </select>
+
+                    <!-- Starting time -->
+                <td>
+                    <form action="getvalue()">
+                    <input type="num" placeholder="00" class="starthour" style="width:
+                20px">:
+                    <input type="num" placeholder="00" class="startmint" style="width:20px;">
+                    <label for="Am or Pm"class="amorpmst"></label>
+                    <select class="AmorPm">
+                        <option value="Am">Am</option>
+                        <option value="Pm">Pm</option>
+                    </select>
+                </form>
+                </td>
+
+                <!-- Ending time -->
+                <td>
+                    <input type="num" placeholder="00" class="endhour" style="width:
+                20px">:
+                    <input type="num" placeholder="00" class="endmint" style="width:20px;">
+                    <label for="Am or Pm"class="amorpmen"></label>
+                    <select class="AmorPm">
+                        <option value="Am">Am</option>
+                        <option value="Pm">Pm</option>
+                    </select>
+                </td>
+
+                 <!-- Break Defuction -->
+                <td>
+                    <input type="num" placeholder="00" class="breakhour" style="width:
+                20px">:
+                    <input type="num" placeholder="00" class="breakmint" style="width:20px;">
+                </td>
+            
+                <!-- Total hours -->
+                <td>
+                    <div class="resultdiv" id="result2">00:00</div>
+                </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <label for="day"></label>
+                <select id="day">
+
+                    <option value="Thuesday">Thuesday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Satureday">Satureday</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                </select>
+
+                <!-- Starting time -->
+            <td>
+                <form action="getvalue()">
+                <input type="num" placeholder="00" class="starthour" style="width:
+            20px">:
+                <input type="num" placeholder="00" class="startmint" style="width:20px;">
+                <label for="Am or Pm"class="amorpmst"></label>
+                <select class="AmorPm">
+                    <option value="Am">Am</option>
+                    <option value="Pm">Pm</option>
+                </select>
+            </form>
+            </td>
+
+            <!-- Ending time -->
+            <td>
+                <input type="num" placeholder="00" class="endhour" style="width:
+            20px">:
+                <input type="num" placeholder="00" class="endmint" style="width:20px;">
+                <label for="Am or Pm"class="amorpmen"></label>
+                <select class="AmorPm">
+                    <option value="Am">Am</option>
+                    <option value="Pm">Pm</option>
+                </select>
+            </td>
+
+             <!-- Break Defuction -->
+            <td>
+                <input type="num" placeholder="00" class="breakhour" style="width:
+            20px">:
+                <input type="num" placeholder="00" class="breakmint" style="width:20px;">
+            </td>
+        
+            <!-- Total hours -->
+            <td>
+                <div class="resultdiv" id="result3">00:00</div>
+            </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="day"></label>
+            <select id="day">
+
+                <option value="Friday">Friday</option>
+                <option value="Satureday">Satureday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thuesday">Thuesday</option>
+            </select>
+
+            <!-- Starting time -->
+        <td>
+            <form action="getvalue()">
+            <input type="num" placeholder="00" class="starthour" style="width:
+        20px">:
+            <input type="num" placeholder="00" class="startmint" style="width:20px;">
+            <label for="Am or Pm"class="amorpmst"></label>
+            <select class="AmorPm">
+                <option value="Am">Am</option>
+                <option value="Pm">Pm</option>
+            </select>
+        </form>
+        </td>
+
+        <!-- Ending time -->
+        <td>
+            <input type="num" placeholder="00" class="endhour" style="width:
+        20px">:
+            <input type="num" placeholder="00" class="endmint" style="width:20px;">
+            <label for="Am or Pm"class="amorpmen"></label>
+            <select class="AmorPm">
+                <option value="Am">Am</option>
+                <option value="Pm">Pm</option>
+            </select>
+        </td>
+
+         <!-- Break Defuction -->
+        <td>
+            <input type="num" placeholder="00" class="breakhour" style="width:
+        20px">:
+            <input type="num" placeholder="00" class="breakmint" style="width:20px;">
+        </td>
+    
+        <!-- Total hours -->
+        <td>
+            <div class="resultdiv" id="result4">00:00</div>
+        </td>
+</tr>
+
+
+<tr>
+    <td>
+        <label for="day"></label>
+        <select id="day">
+            <option value="Satureday">Satureday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thuesday">Thuesday</option>
+            <option value="Friday">Friday</option>
+        </select>
+
+        <!-- Starting time -->
+    <td>
+        <form action="getvalue()">
+        <input type="num" placeholder="00" class="starthour" style="width:
+    20px">:
+        <input type="num" placeholder="00" class="startmint" style="width:20px;">
+        <label for="Am or Pm"class="amorpmst"></label>
+        <select class="AmorPm">
+            <option value="Am">Am</option>
+            <option value="Pm">Pm</option>
+        </select>
+    </form>
+    </td>
+
+    <!-- Ending time -->
+    <td>
+        <input type="num" placeholder="00" class="endhour" style="width:
+    20px">:
+        <input type="num" placeholder="00" class="endmint" style="width:20px;">
+        <label for="Am or Pm"class="amorpmen"></label>
+        <select class="AmorPm">
+            <option value="Am">Am</option>
+            <option value="Pm">Pm</option>
+        </select>
+    </td>
+
+     <!-- Break Defuction -->
+    <td>
+        <input type="num" placeholder="00" class="breakhour" style="width:
+    20px">:
+        <input type="num" placeholder="00" class="breakmint" style="width:20px;">
+    </td>
+
+    <!-- Total hours -->
+    <td>
+        <div class="resultdiv" id="result5">00:00</div>
+    </td>
+</tr>
+         </tfoot>
+        </table>
+        <div class="workh" style="margin-top: 20px ;"> <span> Total work :-</span>
+        <div class="result" id="totalwork" style="display: inline; margin-top: 20px;">00:00</div>
+    </div>
+
+    <!-- Clear all the formate same or submit the details -->
+    <div style="margin-top: 20px;">
+        <button id="clearall">Clear All</button>
+    <button id="calculate" onclick="calculate()">Calculate</button>
+    </div>
+    
+    </div>
+    <!-- External js file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
